@@ -1,0 +1,46 @@
+{
+    "name": "string-theocracy",
+    "description": "Smol HTTP router library",
+    "version": "0.0.0",
+    "author": {
+        "name": "saltyAom",
+        "url": "https://github.com/SaltyAom",
+        "email": "saltyaom@gmail.com"
+    },
+    "main": "build/index.js",
+    "module": "build/esm/index.js",
+    "esnext": "build/esm/index.js",
+    "types": "src/index.ts",
+    "typings": "src/index.ts",
+    "keywords": [
+        "smol",
+        "http",
+        "router"
+    ],
+    "homepage": "https://github.com/saltyaom/string-theocracy",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/saltyaom/string-theocracy"
+    },
+    "bugs": "https://github.com/SaltyAom/string-theocracy/issues",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest",
+        "dev": "nodemon --config nodemon.json",
+        "build": "npm run build:main && npm run build:cjs && npm run build:es",
+        "build:cjs": "swc src --config-file .cjs.swcrc -d build/cjs",
+        "build:es": "swc src --config-file .es.swcrc -d build/es",
+        "build:main": "swc src --config-file .cjs.swcrc -d build"
+    },
+    "devDependencies": {
+        "@swc/cli": "^0.1.57",
+        "@swc/core": "^1.2.211",
+        "@swc/jest": "^0.2.21",
+        "@types/jest": "^28.1.4",
+        "@types/node": "^18.0.3",
+        "jest": "^28.1.2",
+        "nodemon": "^2.0.19",
+        "ts-node": "^10.8.2",
+        "typescript": "^4.7.4"
+    }
+}
