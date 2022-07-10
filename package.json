@@ -1,7 +1,7 @@
 {
     "name": "string-theocracy",
     "description": "Smol HTTP router library",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "author": {
         "name": "saltyAom",
         "url": "https://github.com/SaltyAom",
@@ -30,7 +30,8 @@
         "build": "npm run build:main && npm run build:cjs && npm run build:es",
         "build:cjs": "swc src --config-file .cjs.swcrc -d build/cjs",
         "build:es": "swc src --config-file .es.swcrc -d build/es",
-        "build:main": "swc src --config-file .cjs.swcrc -d build"
+        "build:main": "swc src --config-file .cjs.swcrc -d build",
+        "release": "npm run build && npm publish"
     },
     "devDependencies": {
         "@swc/cli": "^0.1.57",

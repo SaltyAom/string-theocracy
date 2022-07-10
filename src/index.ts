@@ -49,8 +49,6 @@ export default class StringTheocracy<T = any> {
 	}
 
 	#on(route: Route, [path, ...routes]: string[], handler: T) {
-		console.log(path, route, this.#routes)
-
 		if (!route[path])
 			if (path.charCodeAt(0) === 58) {
 				// Colon
